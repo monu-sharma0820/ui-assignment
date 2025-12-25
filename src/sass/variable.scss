@@ -1,0 +1,27 @@
+$fs-22:22px;
+$fs-24:24px;
+$fs-16:16px;
+$fs-14:14px;
+$fs-20:20px;
+$fs-24:24px;
+$fs-18:18px;
+$fs-39:39px;
+$fw-700:700;
+$fw-400:400;
+$fw-600:600;
+
+$grey-color: #221F20;
+$light-grey: #707070;
+$blue-color : #005CB9;
+$white-color:#fff;
+$light-blue: #F3FAFF;
+$yellow-color: #FFCE02;
+
+
+
+
+@mixin boxContainer
+{
+    max-width: 1326px;
+    margin: 0 auto;
+}

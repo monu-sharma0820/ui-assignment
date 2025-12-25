@@ -1,0 +1,252 @@
+@import '../sass/variable.scss';
+
+.demat-benefits {
+   @include boxContainer;
+
+   h2 {
+      margin-bottom: 72px;
+      color: $grey-color;
+      font-weight: $fw-700;
+      font-size: $fs-39;
+      text-align: center;
+   }
+
+   .demat-benefits__wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 42px;
+
+      .demat-benefits__card {
+         max-width: 267px;
+         padding: 15px;
+         border: 1px solid #221F2029;
+         border-radius: 16px;
+
+
+         h3 {
+            font-size: $fs-22;
+            font-weight: $fw-600;
+         }
+
+         p {
+            font-size: $fs-16;
+            color: $light-grey;
+            font-weight: $fw-400;
+         }
+      }
+
+      .demat-benefits {
+         width: 642px;
+         height: 280px;
+
+
+         border: 1px solid #221F2029;
+
+         .demat-benefits__highlight {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 72px;
+            padding: 5px;
+         }
+
+      }
+
+      .highlight-btn {
+         margin-left: 32px;
+         background-color: $blue-color;
+         color: $white-color;
+         font-weight: $fw-600;
+         padding: 16px;
+         border: 1px solid #fff;
+         border-radius: 8px;
+      }
+
+   }
+
+   .swiper-wrapper {
+      display: none;
+   }
+
+   .demat-benefitscard {
+      background-color: $light-blue;
+      border-radius: 16px;
+
+      &.desktopshow {
+         display: block;
+      }
+
+      &.desktophide {
+         display: none;
+      }
+
+      width:642px;
+      // height: 280px;
+      border:1px solid #221F2029;
+
+      .demat-benefits__highlight {
+         display: flex;
+         gap: 75px;
+         padding: 32px;
+
+         .highlight-row {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+
+            h4 {
+               font-size: $fs-24;
+               color: $blue-color;
+               margin: 0;
+               font-weight: $fw-700;
+            }
+
+            p {
+               margin: 0;
+               font-size: $fs-18;
+               color: $grey-color;
+               font-weight: $fw-400;
+            }
+
+            .highlight-div {
+               position: relative;
+               padding-left: 14px;
+
+            }
+
+            .highlight-div::before {
+               content: "";
+               position: absolute;
+               left: 0;
+               top: 4px;
+               width: 3px;
+               height: 100%;
+               background-color: $yellow-color;
+               border-radius: 1px;
+            }
+
+         }
+
+
+      }
+   }
+}
+
+@media (max-width: 767px) {
+
+   .demat-benefits {
+
+      h2 {
+         margin: 32px 24px 32px 24px;
+         font-size: $fs-24;
+      }
+
+      .demat-benefits__wrapper {
+         flex-wrap: nowrap;
+         overflow-x: auto;
+         width: fit-content;
+         gap: 16px;
+         scroll-snap-type: x mandatory;
+         -webkit-overflow-scrolling: touch;
+         position: relative;
+         margin-left: 24px;
+
+         .swiper-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-top: 23px;
+            position: fixed;
+            bottom: 35%;
+            left: 35%;
+            z-index: 9999999;
+         }
+
+         .swiper-btn {
+            display: flex;
+            gap: 16px;
+         }
+
+         .nav-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            cursor: pointer;
+         }
+
+         .demat-benefits__card {
+            flex: 0 0 85%;
+            max-width: 230px;
+            height: auto;
+            scroll-snap-align: start;
+
+            h3 {
+               font-size: $fs-18;
+            }
+
+            p {
+               font-size: $fs-16;
+            }
+
+            img {
+               width: 47px;
+               height: 47px;
+            }
+
+         }
+      }
+
+      .highlight-btn {
+         margin-left: 32px;
+         background-color: $blue-color;
+         color: $white-color;
+         font-weight: $fw-600;
+         font-size: $fs-16;
+         padding: 16px;
+         border: 1px solid #fff;
+         border-radius: 8px;
+         margin-bottom: 32px;
+      }
+
+      .demat-benefits__wrapper::-webkit-scrollbar {
+         display: none;
+      }
+
+
+      .demat-benefitscard {
+         &.desktopshow {
+            display: none;
+         }
+
+         &.desktophide {
+            display: block;
+            // margin-top: 106px;
+            width: auto;
+            margin: 106px 24px;
+         }
+
+         .demat-benefits__highlight {
+            .highlight-row {
+               h4 {
+                  font-size: $fs-20;
+               }
+
+               p {
+                  font-size: $fs-14;
+               }
+            }
+         }
+
+         .demat-benefits__highlight {
+            width: auto;
+            flex-direction: column;
+            gap: 32px;
+            margin-top: 24px;
+         }
+      }
+
+      .demat-benefits__container {
+         position: relative;
+         overflow: hidden;
+      }
+
+   }
+}
