@@ -1,6 +1,5 @@
 
 import "../src/sass/app.scss";
-import '../src/small.js';
 import leftArrow from "../src/icons/leftarrow.png";
 import rightArrow from "../src/icons/rightarrow.png";
 
@@ -57,7 +56,7 @@ const DematAccountBenefits = () => {
         <div className="demat-benefits__wrapper" id="benefitsScroll" >
           {dematAccountBenefits.map((item, index) => (
             <div className="demat-benefits__card" key={index}>
-              <img src={item.image} />
+              <img src={item.image} alt="image-not-found" />
               <h3 className="demat-benefits__card-title">
                 {item.title}
               </h3>
