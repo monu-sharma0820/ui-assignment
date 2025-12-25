@@ -1,7 +1,7 @@
 
 import "../src/sass/app.scss";
-import leftArrow from "../src/icons/leftarrow.png";
-import rightArrow from "../src/icons/rightarrow.png";
+import leftArrow from "../src/icons/lefticon.png";
+import rightArrow from "../src/icons/righticon.png";
 
 const dematAccountBenefits = [
   {
@@ -65,15 +65,7 @@ const DematAccountBenefits = () => {
               </p>
             </div>
           ))}
-          <div className="swiper-wrapper">
-            {/* <div className="swiper-btn">
-              <button className="nav-btn left" onClick={() => scrollCards(-1)}>
-                ‹
-              </button>
-              <button className="nav-btn right" onClick={() => scrollCards(1)}>
-                ›
-              </button>
-            </div> */}
+          {/* <div className="swiper-wrapper">
             <div className="swiper-btn">
               <img
                 src={leftArrow}
@@ -88,7 +80,7 @@ const DematAccountBenefits = () => {
                 alt="Next"
               />
             </div>
-          </div>
+          </div> */}
 
           <div className="demat-benefitscard desktopshow  ">
             <div className="demat-benefits__highlight">
@@ -124,6 +116,22 @@ const DematAccountBenefits = () => {
             </button>
           </div>
         </div>
+        <div className="swiper-wrapper">
+            <div className="swiper-btn">
+              <img
+                src={leftArrow}
+                className="nav-btn left"
+                onClick={() => scrollCards(-1)}
+                alt="Previous"
+              />
+              <img
+                src={rightArrow}
+                className="nav-btn right"
+                onClick={() => scrollCards(1)}
+                alt="Next"
+              />
+            </div>
+          </div>
         <div className="demat-benefitscard desktopshow desktophide ">
           <div className="demat-benefits__highlight">
             <div className="highlight-row">

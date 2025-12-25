@@ -150,20 +150,6 @@
          position: relative;
          margin-left: 24px;
 
-         .swiper-wrapper {
-            display: flex;
-            justify-content: center;
-            margin-top: 23px;
-            position: fixed;
-            bottom: 35%;
-            left: 35%;
-            z-index: 9999999;
-         }
-
-         .swiper-btn {
-            display: flex;
-            gap: 16px;
-         }
 
          .nav-btn {
             width: 32px;
@@ -246,6 +232,22 @@
       .demat-benefits__container {
          position: relative;
          overflow: hidden;
+      }
+
+      .swiper-wrapper {
+         display: block;
+         margin-top: 23px;
+         position: absolute;
+         bottom: 63%;
+         left: 35%;
+         z-index: 9999999;
+
+
+
+         .swiper-btn {
+            display: flex;
+            gap: 16px;
+         }
       }
 
    }
